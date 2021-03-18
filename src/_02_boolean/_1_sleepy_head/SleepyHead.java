@@ -74,11 +74,11 @@ else {
 		boolean isRed;
 		// Ask the user what color to draw with. Based on their answer, set the isRed variable
 		String color = JOptionPane.showInputDialog("what color do you want to draw with?");
-		isRed = color.equals("Red");
+		isRed = color.equalsIgnoreCase("Red");
 		boolean isSquare;		
 		// Now ask the user what shape to draw. Based on their answer, set the isSquare variable
 		String shape = JOptionPane.showInputDialog("What shape do you want to draw?");
-		isSquare = shape.equals("Square");
+		isSquare = shape.equalsIgnoreCase("Square");
 		
 		if(isSquare && isRed) {
 			drawRedSquare();
@@ -104,8 +104,8 @@ else {
 		for(int i = 0;i<4; i++) {
 			rob.move(100);
 			rob.turn(90);
-			
 		}
+		rob.hide();
 		// Complete the rest of this method
 	}	
 }
