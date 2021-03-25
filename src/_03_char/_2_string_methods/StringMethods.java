@@ -5,7 +5,20 @@ public class StringMethods {
 	public static void main(String[] args) {
 		
 		// 1. Create a String variable and initialize it to contain a minimum of 3 characters
+String var = "Kicking";
+System.out.println(var.charAt(2)); 
+System.out.println(var.length());
 
+for(int i=0; i<var.length(); i++) {
+	System.out.println(var.charAt(i));
+}
+
+for(int i=0; i<var.length();i++) {
+	if(var.charAt(i)=='i') {
+		System.out.println(i);
+	}
+	
+}
 		// 2. Print the 3rd char of your String to the console.
 		//    HINT: .charAt
 

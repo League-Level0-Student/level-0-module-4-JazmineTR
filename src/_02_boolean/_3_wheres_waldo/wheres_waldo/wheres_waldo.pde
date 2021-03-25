@@ -22,28 +22,32 @@ void setup() {
 void draw() {
 
       // If the user presses the mouse .......
-      if(mousePressed && mouseX==377 && mouseY==197){
+      if(mousePressed && mouseX>=364 && mouseY<=197 && mouseX<=378 && mouseY>=190){
         println("Waldo found!");
       }
+      else if(mousePressed) {
+        println("Not here!");
+    }
+     
       
           // Use this print statement to help you find the location of Waldo to use in the code below
           // println("X: " + mouseX + " Y: " + mouseY); 
-    
+    //println(mouseX,mouseY);
           // Check if the location of the mouse is anywhere on the image of Waldo.
           // If it is, print “Waldo found!”  Use the text() command to write it on the sketch.
           
-                if (canPlaySounds) {
-                    playWoohoo();
+               //* if (canPlaySounds) {
+                    //playWoohoo();
                   // Use the playWhoohoo() method below. You can change the sound if you want 
-                } 
-    if(
+               // } 
+   
           // However, if the mouse is not on Waldo, print "Not here!" 
           // Use the text() command to write it on the sketch. 
           
-                if (canPlaySounds) {
-                  playDoh();
+                //if (canPlaySounds) {
+                  //playDoh();
                     // Use the playDoh() method below. You can change the sound if you want 
-                }       
+               // }       
                 
 }
 
@@ -66,7 +70,6 @@ void playWoohoo() {
 AudioSample doh;
 void playDoh() {
      if (doh == null)
-         doh = minim.loadSample("homer-doh.wav"); 
      doh.stop();
      doh.trigger();
 }
